@@ -55,7 +55,9 @@
             <option value="a.published ASC">JSTATUS_ASC</option>
             <option value="a.published DESC">JSTATUS_DESC</option>
         </field>
+    </fields>
 
+    <fields name="listlimit">
         <field name="limit"
               type="limitbox"
               label="JSEARCH_FILTER_LIMIT"

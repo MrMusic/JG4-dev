@@ -78,7 +78,8 @@ $customOptions = [
     'formSelector'        => !empty($data['options']['formSelector']) ? $data['options']['formSelector'] : '#adminForm',
     'barClass'            => '',
     'showSearch'          => true,
-    'showList'            => true
+    'showList'            => true,
+    'showListlimit'       => true
 ];
 
 // Merge custom options in the options array.
@@ -103,6 +104,9 @@ HTMLHelper::_('searchtools.form', $data['options']['formSelector'], $data['optio
       <?php endif; ?>
       <?php if ($data['options']['showList']) : ?>
         <?php echo $this->sublayout('list', $data); ?>
+      <?php endif; ?>
+      <?php if ($data['options']['showListlimit']) : ?>
+        <?php echo $this->sublayout('listlimit', $data); ?>
       <?php endif; ?>
     </div>
   </div>
